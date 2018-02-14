@@ -33,6 +33,10 @@ public class Colosseum {
     /**
      * Input scanner. Use this to take in user's input for buildPokemon(). <br>
      * Useful functions: next(), nextInt() .
+     * myScan = new Scanner(System.in  );
+     * System.out.print("How old are you?");
+     * int age = myScan.nextInt();
+     * String a = myScan.next();
      */
     static Scanner myScan;
 
@@ -72,6 +76,13 @@ public class Colosseum {
      *         Implement this function.
      */
     public static Pokemon buildPokemon() {
+        myScan = new Scanner(System.in);
+        System.out.println("How many hit points will it have?");
+
+        if (int hitPoints > MAX_HIT_POINTS) {
+            return null;
+        }
+
         Pokemon tempPokemon = new Pokemon();
         return tempPokemon;
     }
